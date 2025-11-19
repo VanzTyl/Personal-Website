@@ -160,7 +160,7 @@
 
 .hero-body .image-container img{
     opacity: 0;
-    animation: fadeInFromBottom .5s ease-out forwards;
+    animation: fadeInFromBottom 1s ease-out forwards;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -210,7 +210,7 @@
 /* Fade In From Left (-10%) */
 @keyframes fadeInFromLeft {
     0% {
-        transform: translateX(-10%);
+        transform: translateX(-15%);
         opacity: 0;
     }
     100% {
@@ -222,7 +222,7 @@
 /* Fade In From Right (-10%) */
 @keyframes fadeInFromRight {
     0% {
-        transform: translateX(10%);
+        transform: translateX(15%);
         opacity: 0;
     }
     100% {
@@ -234,7 +234,7 @@
 /* Fade In From Bottom (-10%) */
 @keyframes fadeInFromBottom {
     0% {
-        transform: translateY(10%);
+        transform: translateY(50%);
         opacity: 0;
     }
     100% {

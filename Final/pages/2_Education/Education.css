@@ -141,8 +141,161 @@
 }
 
 .hero-content{
-    position: relative;
+    position: absolute;
+}
+
+.hero-content .top-section{
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hero-content .top-section a{
+    width: 50%;
+    height: 50%;
+    border: 2.5px solid var(--primary);
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hero-content .top-section a i{
+    color: var(--primary);
+    height: max-content;
+    width: max-content;
+    font-size: 24px;
+}
+
+.hero-content .top-section a .text{
+    color: var(--primary);
+    height: max-content;
+    width: max-content;
+    font-size: 18px;
+}
+
+.hero-content .top-section a:hover{
+    transition: .5s ease;
+    background-color: var(--primary);
+}
+
+.hero-content .top-section a:hover i{
+    transition: .25s ease;
+    color: var(--background_color);
+    scale: calc(1.1);
+}
+
+.hero-content .top-section a:hover .text{
+    transition: .25s ease;
+    color: var(--background_color);
+    scale: calc(1.1);
+}
+
+.hero-content-overlay{
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.hero-content-overlay .bottom-section{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+}
+
+.hero-content-overlay .bottom-section .card {
+    width: 25%;
+    height: 10%;
+    border-left: 1.25px solid var(--primary);
+    border-right: 1.25px solid var(--primary);
+    border-top: 1.25px solid var(--primary);
+    cursor: pointer;
+    transition: height 0.3s ease;
+    overflow: hidden;
+}
+
+.hero-content-overlay .bottom-section .card .title{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.hero-content-overlay .bottom-section .card .title p{
+    width: max-content;
+    height: max-content;
+}
+
+.hero-content-overlay .bottom-section .card .content{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.hero-content-overlay .bottom-section .card .content .content-container{
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content-overlay .bottom-section .card .content .content-container .logo{
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-content-overlay .bottom-section .card .content .content-container .logo img{
+    height: 75px;
+    width: 75px;
+}
+
+.hero-content-overlay .bottom-section .card .content .content-container .label{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content-overlay .bottom-section .card .content .content-container .label p{
+    height: max-content;
+    width: max-content;
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.hero-content-overlay .bottom-section .card:hover {
+    height: 100%;
+}
+
+.hero-content-overlay .bottom-section .card:hover .title{
+    height: 10%;
+    border-bottom: 2.5px solid var(--primary);
+}
+
+.hero-content-overlay .bottom-section .card:hover .content{
+    transition: ease .75s;
+    opacity: 1;
+}
+
+.hero-content-overlay .bottom-section .card:nth-child(1) .content .content-container:nth-child(3) .logo img {
+    overflow: hidden;
+    transform: scale(2.5);
 }
