@@ -211,6 +211,8 @@
 .hero-content .content-box .upper-box .box-text p{
     height: max-content;
     width: 100%;
+    opacity: 0;                      /* Initially hidden */
+    animation: fadeInFromLeft 1s ease-out forwards; /* Animation duration and easing */
 }
 
 .hero-content .content-box .upper-box .box-text p:nth-child(1){
@@ -292,7 +294,7 @@
 
 @keyframes fadeInFromLeft {
     0% {
-        transform: translateX(-100%); /* Start off to the left */
+        transform: translateX(-5%); /* Start off to the left */
         opacity: 0;
     }
     100% {

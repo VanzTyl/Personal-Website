@@ -159,6 +159,8 @@
 }
 
 .hero-body .image-container img{
+    opacity: 0;
+    animation: fadeInFromBottom .5s ease-out forwards;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -175,6 +177,8 @@
 }
 
 .hero-body .image-container .left-text p{
+    opacity: 0;
+    animation: fadeInFromLeft 1s ease-out forwards;
     height: max-content;
     width: max-content;
     text-align: right;
@@ -193,10 +197,48 @@
 }
 
 .hero-body .image-container .right-text p{
+    opacity: 0;
+    animation: fadeInFromRight 1s ease-out forwards;
     height: max-content;
     width: max-content;
     text-align: right;
     color: white;
     font-size: clamp(1rem, 0.7143rem + 0.4464vw, 1.25rem);
     font-weight: 200;
+}
+
+/* Fade In From Left (-10%) */
+@keyframes fadeInFromLeft {
+    0% {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Fade In From Right (-10%) */
+@keyframes fadeInFromRight {
+    0% {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Fade In From Bottom (-10%) */
+@keyframes fadeInFromBottom {
+    0% {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
