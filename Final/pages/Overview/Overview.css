@@ -43,7 +43,7 @@
     color: var(--primary);
     height: max-content;
     width: max-content;
-    font-size: 24px;
+    font-size: clamp(1rem, 0.4286rem + 0.8929vw, 1.5rem);
 }
 
 .main a:hover{
