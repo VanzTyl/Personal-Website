@@ -1,0 +1,64 @@
+*{
+    font-family: 'Poppins', 'Calibri';
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary: white;
+    --secondary: #C0C0C0;
+    --background_color: #333333;
+}
+
+.main {
+    background-color: var(--background_color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main a {
+    flex: 1 0 20%;
+    height: 50%;
+    border: 1px solid var(--primary);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5%;
+}
+
+.main a i{
+    color: var(--primary);
+    height: max-content;
+    width: max-content;
+    font-size: 32px;
+}
+
+.main a .text{
+    color: var(--primary);
+    height: max-content;
+    width: max-content;
+    font-size: 24px;
+}
+
+.main a:hover{
+    transition: .5s ease;
+    background-color: var(--primary);
+}
+
+.main a:hover i{
+    transition: .25s ease;
+    color: var(--background_color);
+    scale: calc(1.1);
+}
+
+.main a:hover .text{
+    transition: .25s ease;
+    color: var(--background_color);
+    scale: calc(1.1);
+}
