@@ -149,6 +149,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 3;
 }
 
 .hero-content .top-section a{
@@ -164,6 +165,7 @@
     gap: 1.5%;
     cursor: pointer;
     z-index: 2;
+    background-color: var(--background_color);
 }
 
 .hero-content .top-section a i{
@@ -183,6 +185,7 @@
 .hero-content .top-section a:hover{
     transition: .5s ease;
     background-color: var(--primary);
+    border-color: var(--background_color);
 }
 
 .hero-content .top-section a:hover i{
@@ -209,6 +212,7 @@
     width: 100%;
     display: flex;
     align-items: end;
+    z-index: 2;
 }
 
 .hero-content-overlay .bottom-section .card {
@@ -220,6 +224,7 @@
     cursor: pointer;
     transition: height 0.3s ease;
     overflow: hidden;
+    background-color: var(--background_color);
 }
 
 .hero-content-overlay .bottom-section .card .title{
@@ -279,7 +284,7 @@
     width: max-content;
     color: var(--primary);
     font-weight: 500;
-    font-size: 12px;
+    font-size: clamp(0.625rem, 0.4821rem + 0.2232vw, 0.75rem);
 }
 
 .hero-content-overlay .bottom-section .card:hover {
@@ -304,4 +309,13 @@
 .hero-content-overlay .bottom-section .card:nth-child(2) .content .content-container:nth-child(1) .logo img {
     overflow: hidden;
     transform: scale(2.5);
+}
+
+.hero-content-background{
+    position: absolute;
+    background: url(../../assets/education-background.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: 1;
 }
