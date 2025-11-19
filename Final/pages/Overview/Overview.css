@@ -13,6 +13,10 @@
     --background_color: #333333;
 }
 
+body{
+    background-color: var(--background_color);
+}
+
 .main {
     background-color: var(--background_color);
     display: flex;

@@ -259,6 +259,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .hero-content-overlay .bottom-section .card .content .content-container .logo img{
@@ -296,6 +297,11 @@
 }
 
 .hero-content-overlay .bottom-section .card:nth-child(1) .content .content-container:nth-child(3) .logo img {
+    overflow: hidden;
+    transform: scale(2.5);
+}
+
+.hero-content-overlay .bottom-section .card:nth-child(2) .content .content-container:nth-child(1) .logo img {
     overflow: hidden;
     transform: scale(2.5);
 }
