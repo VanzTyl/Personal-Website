@@ -140,9 +140,185 @@
     height: 90%;
 }
 
+.hero-content-background{
+    position: absolute;
+    background: url(../../assets/skills.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+}
+
 .hero-content{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    
+    scroll-snap-type: x mandatory; 
+}
+
+.skill-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-shrink: 0;
+    scroll-snap-align: center;
+}
+
+.skill-box{
+    height: 500px;
+    width: 750px;
+    background-color: var(--background_color);
+    border: 2.5px solid var(--primary);
+    border-radius: 5px;
     position: relative;
+}
+
+.next-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px; 
+    height: 50px;
+    padding: 10px 20px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.next-btn:hover {
+    background-color: var(--primary);
+    color: var(--background_color);
+}
+
+.hero-content::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes popUpEffect {
+    0% {
+        transform: scale(0.5) translateY(40px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+.skill-slide:target .skill-box {
+    animation: popUpEffect 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.box-content{
+    border-radius: 5px;
+}
+
+.skill-title{
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 2.5px solid var(--primary);
+}
+
+.skill-title p{
+    height: max-content;
+    width: max-content;
+    text-align: center;
+    font-size: clamp(1rem, 0.3571rem + 0.9524vw, 1.5rem);
+    color: var(--primary);
+}
+
+.skill-container{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-container-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skill-container-content .skill-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill-container-content .skill-content img{
+    flex-shrink: 0;
+    height: 75px;
+    width: 75px;
+}
+
+.skill-container-content .skill-content p{
+    height: max-content;
+    width: max-content;
+    color: var(--primary);
+}
+
+.projects-btn-container{
+    display: flex;
+    align-items: end;
+    padding-bottom: 25px;
+    justify-content: center;
+}
+
+.projects-btn{
+    height: 50px;
+    width: 350px;
+    border-radius: 10px;
+    border: 2.5px solid var(--primary);
+    background-color: var(--background_color);
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.projects-btn:hover{
+    transition: .5s ease;
+    background-color: var(--primary);
+    border: 2.5px solid var(--background_color);
+}
+
+.projects-btn:hover i{
+    transition: .5s ease;
+    color: var(--background_color);
+}
+
+.projects-btn:hover .text{
+    transition: .5s ease;
+    color: var(--background_color);
+}
+
+.projects-btn i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.projects-btn .text{
+    height: max-content;
+    width: 75px;
+    color: var(--primary);
+    font-size: 16px;
 }

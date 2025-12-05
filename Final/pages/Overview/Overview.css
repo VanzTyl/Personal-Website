@@ -27,7 +27,7 @@ body{
 .main a {
     flex: 1 0 20%;
     height: 50%;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -36,6 +36,8 @@ body{
     gap: 1.5%;
     opacity: 0;
     animation: fadeIn .5s ease forwards;
+    position: relative;
+    overflow: hidden;
 }
 
 .main a i{
@@ -43,6 +45,23 @@ body{
     height: max-content;
     width: max-content;
     font-size: 32px;
+}
+
+.main a img {
+    position: absolute;
+    z-index: -1;
+    background-position: center center;
+    background-size: cover; /* Increased from 100% to zoom in */
+    background-repeat: no-repeat;
+    filter: grayscale(10%) brightness(70%) blur(3.5px);
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.main a:hover img{
+    transition: .75s ease;
+    scale: calc(1.25);
+    opacity: 1;
 }
 
 .main a .text{
@@ -58,14 +77,13 @@ body{
 }
 
 .main a:hover i{
-    transition: .25s ease;
-    color: var(--background_color);
+    transition: .5s ease;
+    color: var(--primary);
     scale: calc(1.1);
 }
 
 .main a:hover .text{
     transition: .25s ease;
-    color: var(--background_color);
     scale: calc(1.1);
 }
 
@@ -77,6 +95,7 @@ body{
 #about-me-1 {
     animation-delay: 0.15s;
 }
+
 
 #education-2 {
     animation-delay: 0.3s;

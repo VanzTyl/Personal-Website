@@ -166,6 +166,7 @@
     cursor: pointer;
     z-index: 2;
     background-color: var(--background_color);
+    animation: fadeIn .5s ease-in;
 }
 
 .hero-content .top-section a i{
@@ -225,6 +226,22 @@
     transition: height 0.3s ease;
     overflow: hidden;
     background-color: var(--background_color);
+}
+
+#card1{
+    animation: fadeIn .5s ease;
+}
+
+#card2{
+    animation: fadeIn 1s ease;
+}
+
+#card3{
+    animation: fadeIn 1.5s ease;
+}
+
+#card4{
+    animation: fadeIn 2s ease;
 }
 
 .hero-content-overlay .bottom-section .card .title{
@@ -313,9 +330,19 @@
 
 .hero-content-background{
     position: absolute;
-    background: url(../../assets/education-background.jpg);
+    background: url(../../assets/education.jpg);
     background-size: cover;
     background-position: center;
     filter: blur(5px);
     z-index: 1;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    

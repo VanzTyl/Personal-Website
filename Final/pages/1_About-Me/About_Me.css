@@ -142,10 +142,11 @@
 
 .hero-body .background-image-container{
     position: absolute;
-    background-image: url(../../assets/about-me-background.jpg);
+    background-image: url(../../assets/unnamed.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    filter: blur(5px);
     z-index: 1;
 }
 
